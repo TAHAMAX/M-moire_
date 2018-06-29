@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jeux de mémoire gratuit</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" >
+	<script src="jquery-2.2.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="Mémoire.css">
+
+</head>
+<body>
+	<div id="back">
+		 <button style="left: 10px; top: 10px;">back</button>
+	</div>
+	<div id="page1" style="width:50% text-align: center " class="center">
+		<p style="font-size:20px">jeux de mémoire gratuit</p>
+        <p class="center"><p style="font-size:20px">Enter UR Name </p><input type="text" ></p>
+        <p class="center" style="font-size: 100px">chosir level </p><br><br>
+		<button id="4item" class="button center"><p>level 1<br>4 Item</p></button>
+		<button id="6item" class="button center"><p>level 2<br>6 Item</p></button>
+	    <button id="8item" class="button center"><p>level 3<br>8 Item</p></button>
+   </div>
+	
+	<div id="page2" style="width:100% text-align: center top=0px" class="center">
+        <p id="Wellcom"class="center" style="font-size: 50px">jeux de mémoire gratuit</p>
+		
+        <button id="2" class="button"><p id="t2"></p>
+        <p style="font-size:  20px">?</p>
+		</button>
+		<button id="1" class="button"><p id="t1">
+		<p  style="font-size: 20px">?</p>
+		</p></button>
+		<button id="5" class="button"><p id="t5"></p>
+		<p  style="font-size: 20px">?</p>
+		</button>
+		<br><br>
+        <button id="3" class="button"><p id="t3"></p>
+        <p  style="font-size: 20px">?</p>
+	    </button>
+		<button id="4" class="button"><p id="t4"></p>
+		<p  style="font-size: 20px">?</p>
+		</button>
+		
+		<button id="6" class="button"><p id="t6"></p>
+		<p   style="font-size: 20px">?</p>
+		</button>
+
+   </div>
+<script >
+
+$(document).ready(function()
+{
+	var t1=0;var t2=0;var t3=0;var t4=0;var t5=0;var t6=0;var over=0;
+	$("#page2").hide();back
+		$("#back").hide();
+
+	$("#4item").click(function() 
+	{
+	});
+
+	$("#4item").click(function() 
+	{
+		var t1=0;var t2=0;var t3=0;var t4=0;
+        $("#1").hide();			$("#6").hide();
+		$("#page1").hide(1000);$("#page2").show(2000);$("#back").show(2500);
+
+		
+		$("#2").click(function() 
+		{
+			t2=2;
+			if (t2==t4) 
+			{
+				$("#2").addClass( "b_color3" );
+				$("#4").addClass( "b_color3" );
+				$("#2").hide( 3000);
+				$("#4").hide( 3000);
+				over=over+1			;		
+		    }else
+			{
+				t5=0;t1=0;t5=0;t6=0;
+				$("#2").addClass( "b_color3" );$("#3").removeClass( "b_color2" );
+				$("#4").removeClass( "b_color3" );$("#5").removeClass( "b_color2" );
+			}
+		});
+		$("#3").click(function() 
+		{
+			t3=2;
+			if (t5==t3) 
+			{
+				$("#5").addClass( "b_color2" );
+				$("#3").addClass( "b_color2" );
+				$("#5").hide( 3000);
+				$("#3").hide( 3000);
+				over=over+1;
+			}else
+			{
+				t2=0;t1=0;t4=0;t6=0;
+				$("#3").addClass( "b_color2" ); $("#2").removeClass( "b_color3" ); 
+				$("#4").removeClass( "b_color3" );$("#5").removeClass( "b_color2" );
+			}
+		});
+		$("#4").click(function() 
+		{
+			t4=2;
+			if (t2==t4) 
+			{
+				$("#2").addClass( "b_color3" );
+				$("#4").addClass( "b_color3" );
+				$("#2").hide( 3000);
+				$("#4").hide( 3000);
+			    over=over+1;
+			}else{t5=0;t1=0;t5=0;t6=0;
+				$("#4").addClass( "b_color3" ); $("#2").removeClass( "b_color3" ); 
+				$("#3").removeClass( "b_color2" );$("#5").removeClass( "b_color2" );
+			}
+		});
+		$("#5").click(function() 
+		{
+
+			t5=2;
+			if (t5==t3) 
+			{
+				$("#5").addClass( "b_color2" );
+				$("#3").addClass( "b_color2" );
+				$("#5").hide( 3000);
+				$("#3").hide( 3000);
+			    over=over+1;
+			}else
+			{
+				t2=0;t4=0;
+				$("#5").addClass( "b_color2" ); $("#2").removeClass( "b_color3" );
+			    $("#4").removeClass( "b_color3" );$("#3").removeClass( "b_color2" );$			}
+		});
+
+			// if (overS=6) { alert("Game over");}
+	  //       alert(over);
+
+	});
+	$("#6item").click(function() 
+	{ 		
+
+		$("#page1").hide(1000);$("#page2").show(2000);$("#back").show(2500);
+
+		$("#1").click(function() 
+		{ 	
+
+			t1=2;
+			if (t1==t6) 
+			{
+				$("#1").addClass( "b_color1" );
+				$("#6").addClass( "b_color1" );
+				$("#1").hide( 3000);
+				$("#6").hide( 3000);
+				over=over+1	;				
+		    }else
+		    {
+				t2=0;t3=0;t4=0;t5=0;
+				$("#1").addClass( "b_color1" ); $("#2").removeClass( "b_color3" );
+				$("#3").removeClass( "b_color2" );$("#4").removeClass( "b_color1" );
+				$("#5").removeClass( "b_color2" );$("#6").removeClass( "b_color1" );	
+			}	
+		});
+		$("#2").click(function() 
+		{
+			t2=2;
+			if (t2==t4) 
+			{
+				$("#2").addClass( "b_color3" );
+				$("#4").addClass( "b_color3" );
+				$("#2").hide( 1000);
+				$("#4").hide( 1000);
+				over=over+1			;		
+		    }else
+			{
+				t5=0;t1=0;t5=0;t6=0;
+				$("#2").addClass( "b_color3" ); $("#1").removeClass( "b_color1" );
+				$("#3").removeClass( "b_color2" );$("#4").removeClass( "b_color3" );
+				$("#5").removeClass( "b_color2" );$("#6").removeClass( "b_color1" );
+			}
+		});
+		$("#3").click(function() 
+		{
+			t3=2;
+			if (t5==t3) 
+			{
+				$("#5").addClass( "b_color2" );
+				$("#3").addClass( "b_color2" );
+				$("#5").hide( 1000);
+				$("#3").hide( 1000);
+				over=over+1;
+			}else
+			{
+				t2=0;t1=0;t4=0;t6=0;
+				$("#3").addClass( "b_color2" ); $("#2").removeClass( "b_color3" ); 
+				$("#1").removeClass( "b_color1" );$("#4").removeClass( "b_color3" );
+				$("#5").removeClass( "b_color2" );$("#6").removeClass( "b_color1" );
+			}
+		});
+		$("#4").click(function() 
+		{
+			t4=2;
+			if (t2==t4) 
+			{
+				$("#2").addClass( "b_color3" );
+				$("#4").addClass( "b_color3" );
+				$("#2").hide( 1000);
+				$("#4").hide( 1000);
+			    over=over+1;
+			}else{t5=0;t1=0;t5=0;t6=0;
+				$("#4").addClass( "b_color3" ); $("#2").removeClass( "b_color3" ); 
+				$("#1").removeClass( "b_color1" );$("#3").removeClass( "b_color2" );
+				$("#5").removeClass( "b_color2" );$("#6").removeClass( "b_color1" );
+			}
+		});
+		$("#5").click(function() 
+		{
+
+			t5=2;
+			if (t5==t3) 
+			{
+				$("#5").addClass( "b_color2" );
+				$("#3").addClass( "b_color2" );
+				$("#5").hide( 1000);
+				$("#3").hide( 1000);
+			    over=over+1;
+			}else
+			{
+				t2=0;t1=0;t4=0;t6=0;
+				$("#5").addClass( "b_color2" ); $("#2").removeClass( "b_color3" );
+				$("#1").removeClass( "b_color1" );$("#4").removeClass( "b_color3" );
+				$("#3").removeClass( "b_color2" );$("#6").removeClass( "b_color1" );
+			}
+		});
+		$("#6").click(function() 
+		{
+			t6=2;
+			if (t1==t6) 
+			{
+				$("#1").addClass( "b_color1" );
+				$("#6").addClass( "b_color1" );
+				$("#1").hide( 1000);
+				$("#6").hide( 1000);
+				over=over+1;
+			}else
+			{
+				t2=0;t3=0;t4=0;t5=0;
+				$("#6").addClass( "b_color1" ); $("#2").removeClass( "b_color3" );
+				$("#1").removeClass( "b_color1" );$("#4").removeClass( "b_color3" );
+				$("#5").removeClass( "b_color2" );$("#3").removeClass( "b_color2" );
+			}	
+
+		});
+			// if (overS=6) { alert("Game over");}
+	  //       alert(over);
+
+	});
+	});
+
+	
+
+</script>
+</body>
+</html>

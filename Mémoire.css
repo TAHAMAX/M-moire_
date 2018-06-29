@@ -1,0 +1,29 @@
+.button 
+{
+position: relative;
+top: 100px;
+left: 10px;	
+padding: 50px 50px;	
+cursor: pointer;
+border-radius: 20px;
+background-color: #ff8800;
+}
+.center 
+{
+position: relative;
+top: 40px;
+text-align: center;
+margin: auto;
+}
+.b_color1
+{
+background-color: #FF369B;ff8800
+}
+.b_color2
+{
+background-color: #092366;
+}
+.b_color3
+{
+background-color: #125C00;
+}
